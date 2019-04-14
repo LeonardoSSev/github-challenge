@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'github-challenge';
+
+  notFoundMessage: string = 'User not found :(';
+
+  isUserFound: boolean = true;
+
+  performUserNotFound () {
+    this.isUserFound = false;
+  }
 }
