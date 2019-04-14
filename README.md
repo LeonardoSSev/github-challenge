@@ -1,4 +1,22 @@
-# Github challenge
+# Desafio GitHub
+
+## Proposta
+
+Implementar uma aplicação do lado cliente que consuma a API do GitHub e mostre os repositórios relacionados a um usuário.
+
+## API
+
+https://developer.github.com/v3/
+
+## Endpoints
+
+Detalhes do usuário: https://api.github.com/users/%7Busername%7D
+
+Repositórios do usuário: https://api.github.com/users/%7Busername%7D/repos
+
+---
+
+# GitHub challenge
 
 ## Proposal
 
