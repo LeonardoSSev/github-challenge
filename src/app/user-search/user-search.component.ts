@@ -27,4 +27,14 @@ export class UserSearchComponent {
       // TODO: perform something with the error response.
     });
   }
+
+  searchUserRepositories () {
+    this.userSearchService.getUserRepositories(this.username)
+    .subscribe(response => {
+      // TODO: perform something with the response.
+    },
+    error => {
+      // TODO: perform something with the error response.
+    });
+  }
 }
