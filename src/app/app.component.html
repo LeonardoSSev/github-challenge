@@ -1,3 +1,7 @@
 <user-search
 (userNotFound)="performUserNotFound()"
 ></user-search>
+
+<span *ngIf="!isUserFound">
+  {{ notFoundMessage }}
+</span>
