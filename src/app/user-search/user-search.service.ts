@@ -15,4 +15,8 @@ export class UserSearchService {
   getUserDetails (username: string) {
     return this.httpClient.get(`${this.baseUrl}${username}`);
   }
+
+  getUserRepositories (username: string) {
+    return this.httpClient.get(`${this.baseUrl}${username}/repos`);
+  }
 }
