@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import { UserSearchService } from './user-search.service';
 
@@ -14,6 +14,8 @@ export class UserSearchComponent {
 
   userSearchService: UserSearchService;
 
+  @Output() userNotFound = new EventEmitter();
+
   constructor (userSearchService: UserSearchService) {
     this.userSearchService = userSearchService;
   }
@@ -24,7 +26,7 @@ export class UserSearchComponent {
       // TODO: perform something with the response.
     },
     error => {
-      // TODO: perform something with the error response.
+      this.userNotFound.emit();
     });
   }
 
