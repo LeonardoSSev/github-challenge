@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class UserSearchComponent {
 
   username: string = '';
+
+  searchUser () {
+    //TODO: fetch user information.
+  }
 }
