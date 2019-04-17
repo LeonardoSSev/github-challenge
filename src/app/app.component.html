@@ -2,6 +2,6 @@
 (userNotFound)="performUserNotFound()"
 ></user-search>
 
-<span *ngIf="!isUserFound">
+<span *ngIf="isUserFound === false">
   {{ notFoundMessage }}
 </span>
