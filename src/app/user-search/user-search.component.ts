@@ -16,6 +16,8 @@ export class UserSearchComponent {
 
   @Output() userNotFound = new EventEmitter();
 
+  @Output() userFound = new EventEmitter();
+
   constructor (userSearchService: UserSearchService) {
     this.userSearchService = userSearchService;
   }
@@ -23,7 +25,7 @@ export class UserSearchComponent {
   searchUser () {
     this.userSearchService.getUserDetails(this.username)
     .subscribe(response => {
-      // TODO: perform something with the response.
+      this.userFound.emit(response)
     },
     error => {
       this.userNotFound.emit();
