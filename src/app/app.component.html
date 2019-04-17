@@ -26,7 +26,19 @@
   </div>
 </article>
 
-
+<main>
+  <section *ngFor="let repo of repos">
+    <h3>
+      <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
+    </h3>
+    <p>
+      {{ repo.description }}
+    </p>
+    <p>
+      {{ repo.stargazers_count }}
+    </p>
+  </section>
+</main>
 <span *ngIf="isUserFound === false">
   {{ notFoundMessage }}
 </span>
