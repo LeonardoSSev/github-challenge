@@ -12,12 +12,17 @@ export class AppComponent {
 
   user: object;
 
+  repos: object;
+
   performUserNotFound () {
     this.isUserFound = false;
   }
 
-  performUserFound (user) {
+  performUserFound (userDetails) {
     this.isUserFound = true;
-    this.user = user
+    this.user = userDetails.user
+    this.repos = userDetails.repos.sort((a, b) => {
+      return b.stargazers_count - a.stargazers_count;
+    });
   }
 }
