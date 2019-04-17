@@ -1,7 +1,31 @@
-<user-search
-(userNotFound)="performUserNotFound()"
-(userFound)="performUserFound($event)"
-></user-search>
+<header>
+  <user-search
+    (userNotFound)="performUserNotFound()"
+    (userFound)="performUserFound($event)"
+  ></user-search>
+</header>
+<article style="float: left; display: flex; flex-flow: column" *ngIf="user">
+  <img [src]="user.avatar_url" alt="user's avatar">
+  <div>
+    <h3 class="user-name">{{ user.name }}</h3>
+  </div>
+  <div>
+    <p class="user-login">{{ user.login }}</p>
+  </div>
+  <div>
+    {{ user.company }}
+  </div>
+  <div>
+    {{ user.location }}
+  </div>
+  <div>
+    {{ user.public_repos }}
+  </div>
+  <div>
+    {{ user.followers }}
+  </div>
+</article>
+
 
 <span *ngIf="isUserFound === false">
   {{ notFoundMessage }}
