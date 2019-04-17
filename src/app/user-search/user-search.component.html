@@ -1,4 +1,7 @@
 <section>
-  <input type="text" [(ngModel)]="username">
-  <button (click)="searchUser()">Search</button>
+  <label for="username" class="Github-Search">
+    GitHub <span class="text-style-1">Search</span>
+  </label>
+  <input type="text" [(ngModel)]="username" id="username" class="Search-Input">
+  <button (click)="searchUser()"><i class="Search-Icon"></i></button>
 </section>
