@@ -10,7 +10,14 @@ export class AppComponent {
 
   isUserFound: boolean;
 
+  user: object;
+
   performUserNotFound () {
     this.isUserFound = false;
+  }
+
+  performUserFound (user) {
+    this.isUserFound = true;
+    this.user = user
   }
 }
