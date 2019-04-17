@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   notFoundMessage: string = 'User not found :(';
 
-  isUserFound: boolean = true;
+  isUserFound: boolean;
 
   performUserNotFound () {
     this.isUserFound = false;
