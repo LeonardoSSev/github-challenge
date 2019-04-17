@@ -3,3 +3,23 @@
   height: 700px;
   background-color: var(--white);
 }
+.user-avatar {
+  width: 280px;
+  height: 280px;
+  border-radius: 2px;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.user-name {
+  width: 280px;
+  height: 40px;
+  font-family: Raleway, serif;
+  font-size: 35px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black);
+}
+
