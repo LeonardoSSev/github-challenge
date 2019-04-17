@@ -14,6 +14,8 @@ export class UserSearchComponent {
 
   userSearchService: UserSearchService;
 
+  user: object;
+
   @Output() userNotFound = new EventEmitter();
 
   @Output() userFound = new EventEmitter();
@@ -25,7 +27,8 @@ export class UserSearchComponent {
   searchUser () {
     this.userSearchService.getUserDetails(this.username)
     .subscribe(response => {
-      this.userFound.emit(response)
+      this.user = response;
+      this.searchUserRepositories();
     },
     error => {
       this.userNotFound.emit();
@@ -35,7 +38,12 @@ export class UserSearchComponent {
   searchUserRepositories () {
     this.userSearchService.getUserRepositories(this.username)
     .subscribe(response => {
-      // TODO: perform something with the response.
+      const userDetailAndRepos = {
+        user: this.user,
+        repos: response
+      };
+
+      this.userFound.emit(userDetailAndRepos);
     },
     error => {
       // TODO: perform something with the error response.
